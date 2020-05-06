@@ -43,7 +43,7 @@ while(play):
 	#make your inital hand
 	playerCount = playerCount + randCard(cards,cardL)
 	playerCount = playerCount + randCard(cards,cardL)
-	
+	print("")
 	print("Your inital total is:",playerCount)
 	
 	choice = input("Will you hit or stand? ")
@@ -59,6 +59,7 @@ while(play):
 			print("You busted!")
 			choice = "lose"
 		else:
+			print("")
 			choice = input("Will you hit or stand? ")
 			while choice != "hit" and choice != "stand":
 				choice = input("Invalid command. Please enter hit or stand: ")
@@ -71,13 +72,14 @@ while(play):
 		else:
 			print("Congrats you won!")
 	
-
+	print("")
 	decision = input("Would you like to play again? [y/n]")
 	while decision != "y" and decision != "n":
 		decision = input("Invalid command. Please enter y or n")
 	
 	if decision == "n":
-		print("Thanks for playing")
+		print("")
+		print("Thanks for playing!")
 		play = False
 	else:
 		playerCount = 0
