@@ -8,8 +8,16 @@ print("5) After the player stands, if their total is closer to 21 than the deale
 print("6) Number cards are worth face value, Ace is worth 1,picture cards are worth ten")
 
 play = True
+#keeps track on round number
 round = 1
+#dictionary thta holds the cards and their values of a deck
+cards = {'Ace':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'10':10,'Jack':10,'Queen':10,'King':10}
 
+#main loop for the game
 while(play):
 	print("Round:",round)
+	
+	
+	
 	play = False
+	round++
