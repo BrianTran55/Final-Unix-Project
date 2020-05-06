@@ -54,7 +54,7 @@ while(play):
 		playerCount = playerCount + randCard(cards,cardL)
 		print("You total is now:",playerCount)
 		
-		if playCount > 21:
+		if playerCount > 21:
 			print("You busted!")
 			choice = "lose"
 		else:
