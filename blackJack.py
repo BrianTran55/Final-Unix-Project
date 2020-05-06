@@ -17,6 +17,8 @@ print("3) This is done by typing 'stand' or 'hit'")
 print("4) If the player goes over 21 they bust")
 print("5) After the player stands, if their total is closer to 21 than the dealer, they win.")
 print("6) Number cards are worth face value, Ace is worth 1,picture cards are worth ten")
+print(" ")
+
 
 play = True
 #keeps track on round number
@@ -28,13 +30,22 @@ cardL = ['Ace','2','3','4','5','6','7','8','9','10','Jack','Queen','King']
 playerCount = 0
 dealerCount = 0
 
+print("**********************************")
 #main loop for the game
 while(play):
 	print("Round:",round)
 	
+	#generate the hand for the dealer
+	dealCount = dealerCount + randCard(cards,cardL)
+	dealCount = dealerCount + randCard(cards,cardL)
 	
+	#make your inital hand
+	playerCount = playerCount + randCard(cards,cardL)
+	playerCount = playerCount + randCard(cards,cardL)
+	
+	print("Your inital total is:",playerCount)
 	
 	
 	
 	play = False
-	round++
+	round+=1
