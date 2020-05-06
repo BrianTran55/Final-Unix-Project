@@ -37,8 +37,8 @@ while(play):
 	print("Round:",round)
 	
 	#generate the hand for the dealer
-	dealCount = dealerCount + randCard(cards,cardL)
-	dealCount = dealerCount + randCard(cards,cardL)
+	dealerCount = dealerCount + randCard(cards,cardL)
+	dealerCount = dealerCount + randCard(cards,cardL)
 	
 	#make your inital hand
 	playerCount = playerCount + randCard(cards,cardL)
