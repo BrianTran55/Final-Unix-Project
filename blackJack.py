@@ -1,3 +1,14 @@
+import random
+
+#function to generated a random card
+def randCard(deck,cardList):
+	randNum = random.randint(0,12)
+	theCard = cardList[randNum]
+	for i in deck:
+		if i == theCard:
+			return deck[i]
+
+
 print("*****Welcome To Black Jack*****")
 print("RULES:")
 print("1) The player and the deal both start with two cards.")
@@ -12,10 +23,16 @@ play = True
 round = 1
 #dictionary thta holds the cards and their values of a deck
 cards = {'Ace':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'10':10,'Jack':10,'Queen':10,'King':10}
+#list that holds keys of the cards dictionary
+cardL = ['Ace','2','3','4','5','6','7','8','9','10','Jack','Queen','King']
+playerCount = 0
+dealerCount = 0
 
 #main loop for the game
 while(play):
 	print("Round:",round)
+	
+	
 	
 	
 	
