@@ -30,9 +30,10 @@ cardL = ['Ace','2','3','4','5','6','7','8','9','10','Jack','Queen','King']
 playerCount = 0
 dealerCount = 0
 
-print("**********************************")
+
 #main loop for the game
 while(play):
+	print("**********************************")
 	print("Round:",round)
 	
 	#generate the hand for the dealer
@@ -46,7 +47,7 @@ while(play):
 	print("Your inital total is:",playerCount)
 	
 	choice = input("Will you hit or stand? ")
-	print(choice)
+	
 	while choice != "hit" and choice != "stand":
 		choice = input("Invalid command. Please enter hit or stand: ")
 
@@ -79,6 +80,8 @@ while(play):
 		print("Thanks for playing")
 		play = False
 	else:
+		playerCount = 0
+		dealerCount = 0
 		play = True
 		round+=1
 	
