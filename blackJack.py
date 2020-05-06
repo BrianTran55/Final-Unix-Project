@@ -45,9 +45,10 @@ while(play):
 	
 	print("Your inital total is:",playerCount)
 	
-	choice = input("Will you hit or stand?")
-	while choice != "hit" or choice != "stand":
-		choice = input("Invalid command. Please enter hit or stand:")
+	choice = input("Will you hit or stand? ")
+	print(choice)
+	while choice != "hit" and choice != "stand":
+		choice = input("Invalid command. Please enter hit or stand: ")
 
 	while choice == "hit":
 		playerCount = playerCount + randCard(cards,cardL)
@@ -57,10 +58,27 @@ while(play):
 			print("You busted!")
 			choice = "lose"
 		else:
-			choice = input("Will you hit or stand?")
-			while choice != "hit" or choice != "stand":
-				choice = input("Invalid command. Please enter hit or stand:")
+			choice = input("Will you hit or stand? ")
+			while choice != "hit" and choice != "stand":
+				choice = input("Invalid command. Please enter hit or stand: ")
 	
+	#compare your total to the dealers
+	if choice == "stand":
+		print("The dealer's hand was:",dealerCount)
+		if playerCount < dealerCount:
+			print("Sorry you lost!")
+		else:
+			print("Congrats you won!")
 	
-	play = False
-	round+=1
+
+	decision = input("Would you like to play again? [y/n]")
+	while decision != "y" and decision != "n":
+		decision = input("Invalid command. Please enter y or n")
+	
+	if decision == "n":
+		print("Thanks for playing")
+		play = False
+	else:
+		play = True
+		round+=1
+	
