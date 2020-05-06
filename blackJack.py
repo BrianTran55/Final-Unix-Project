@@ -45,6 +45,21 @@ while(play):
 	
 	print("Your inital total is:",playerCount)
 	
+	choice = input("Will you hit or stand?")
+	while choice != "hit" or choice != "stand":
+		choice = input("Invalid command. Please enter hit or stand:")
+
+	while choice == "hit":
+		playerCount = playerCount + randCard(cards,cardL)
+		print("You total is now:",playerCount)
+		
+		if playCount > 21:
+			print("You busted!")
+			choice = "lose"
+		else:
+			choice = input("Will you hit or stand?")
+			while choice != "hit" or choice != "stand":
+				choice = input("Invalid command. Please enter hit or stand:")
 	
 	
 	play = False
